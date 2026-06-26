@@ -50,17 +50,24 @@ window.MENU_CONFIG = {
   BUSINESS_INFO: {
     phone: "",            // e.g. "+1 868 123 4567"  → tap-to-call button
     whatsapp: "",         // digits only, e.g. "18681234567" → WhatsApp order button
-    instagram: "",        // handle only, no @, e.g. "shazeedasbrews"
-    address: "",          // shown as text under the menu
-    mapsUrl: "",          // a Google Maps link → "Directions" button
+    instagram: "",        // handle only, no @, e.g. "shazeedasbrews" (not on social yet)
+    address: "12–13 Rosignol, West Coast Berbice",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Shazeeda%27s%20Brews%20%26%20Bites%2C%2012-13%20Rosignol%2C%20West%20Coast%20Berbice",
 
     // Opening hours. Use 24-hour "HH:MM-HH:MM", or "closed".
-    // Leave the whole object empty ({}) to hide the hours section.
-    // Example:
-    //   hours: { sun:"closed", mon:"07:00-19:00", tue:"07:00-19:00",
-    //            wed:"07:00-19:00", thu:"07:00-19:00",
-    //            fri:"07:00-21:00", sat:"08:00-21:00" }
-    hours: {},
+    // Mon–Sat 6:00 AM – 8:00 PM; Sunday 6:00 AM – 2:00 PM.
+    hours: {
+      sun: "06:00-14:00",
+      mon: "06:00-20:00",
+      tue: "06:00-20:00",
+      wed: "06:00-20:00",
+      thu: "06:00-20:00",
+      fri: "06:00-20:00",
+      sat: "06:00-20:00",
+    },
+    // Optional free-text line shown under the hours (holidays can't be
+    // auto-detected, so we state them here).
+    hoursNote: "Public holidays: 6:00 AM – 2:00 PM",
   },
 
   // ---- Feature toggles -------------------------------------------------

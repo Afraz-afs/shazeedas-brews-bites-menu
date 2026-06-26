@@ -380,6 +380,13 @@ body {
   color: var(--text);
   font-weight: 600;
 }
+.hours__note {
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  font-style: italic;
+}
 
 /* ---------- Back to top ---------- */
 .to-top {

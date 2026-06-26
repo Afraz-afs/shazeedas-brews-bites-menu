@@ -360,8 +360,10 @@
       return '<li class="hours__row' + (i === today ? " is-today" : "") + '">' +
         "<span>" + DAY_NAMES[i] + "</span><span>" + esc(label) + "</span></li>";
     }).join("");
+    var note = (cfg.BUSINESS_INFO || {}).hoursNote;
+    var noteHtml = note ? '<p class="hours__note">' + esc(note) + "</p>" : "";
     return '<details class="hours"><summary>🕒 Opening hours</summary>' +
-      '<ul class="hours__list">' + rows + "</ul></details>";
+      '<ul class="hours__list">' + rows + "</ul>" + noteHtml + "</details>";
   }
 
   function renderStatusBadge() {
