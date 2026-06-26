@@ -242,10 +242,12 @@
   }
 
   var spyTargets = [];
+  var lastActiveId = null;
   function refreshSpyTargets() {
     spyTargets = state.cats.map(function (c) {
       return document.getElementById(slug(c));
     }).filter(Boolean);
+    lastActiveId = null; // buttons were re-created — force a re-highlight
     updateActiveNav();
   }
   function setupScrollSpy() {
@@ -263,11 +265,29 @@
     for (var i = 0; i < spyTargets.length; i++) {
       if (spyTargets[i].getBoundingClientRect().top <= line) activeId = spyTargets[i].id;
     }
+    if (activeId === lastActiveId) return; // only touch the DOM when it changes
+    lastActiveId = activeId;
+
+    var activeBtn = null;
     catnavEl.querySelectorAll(".catnav__btn").forEach(function (btn) {
       var on = btn.getAttribute("data-target") === activeId;
       btn.classList.toggle("is-active", on);
-      if (on) btn.scrollIntoView({ block: "nearest", inline: "center" });
+      if (on) activeBtn = btn;
     });
+    if (activeBtn) centerNavButton(activeBtn);
+  }
+
+  // Scroll ONLY the horizontal tab strip to reveal the active tab.
+  // Never uses scrollIntoView, which would also scroll the whole page
+  // and fight the user's own scrolling.
+  function centerNavButton(btn) {
+    var target = btn.offsetLeft - (catnavEl.clientWidth - btn.offsetWidth) / 2;
+    target = Math.max(0, Math.min(target, catnavEl.scrollWidth - catnavEl.clientWidth));
+    if (typeof catnavEl.scrollTo === "function") {
+      catnavEl.scrollTo({ left: target, behavior: "smooth" });
+    } else {
+      catnavEl.scrollLeft = target;
+    }
   }
 
   // ====================================================================
