@@ -6,16 +6,37 @@ is managed by the (non-technical) client through a Google Sheet, so prices,
 new items and sold-out items can be changed without touching code or re-deploying.
 
 ```
-index.html          The menu page
-qr.html             One-time QR-code generator (run after hosting is live)
-css/styles.css      Brand styling (colours pulled from the logo)
-js/config.js        ⭐ The one file you edit to point at the Google Sheet
-js/app.js           Loads + renders the menu, hides sold-out items
-data/menu.json      Local fallback menu (used until the Sheet is connected)
-menu-template.csv   Import this into Google Sheets to create the client's sheet
-assets/logo.jpeg    The logo
-CLIENT-GUIDE.md     Plain-English instructions to hand to the client
+index.html            The menu page
+qr.html               One-time QR-code generator (run after hosting is live)
+css/styles.css        Brand styling (colours pulled from the logo)
+js/config.js          ⭐ The one file you edit: data source + business details
+js/app.js             Loads + renders the menu, hides sold-out items
+data/menu.json        Local fallback menu (used until the Sheet is connected)
+menu-template.csv     Import this into Google Sheets to create the client's sheet
+manifest.webmanifest  Makes the page installable ("Add to Home Screen")
+assets/logo.jpeg      The logo
+CLIENT-GUIDE.md       Plain-English instructions to hand to the client
 ```
+
+---
+
+## Features
+
+- **Live Google Sheet menu** with local-file fallback.
+- **Instant-load cache** — the last good menu is saved in the browser, so repeat
+  scans render immediately and a sheet/network hiccup never shows a blank page.
+- **Search** box to filter items as you type.
+- **Sticky category tabs** that jump to a section and highlight on scroll.
+- **Open / Closed-now badge + opening hours** (from `BUSINESS_INFO.hours`).
+- **Contact buttons** — Call, WhatsApp (pre-filled order), Directions, Instagram,
+  Share. Each appears only if you fill in that detail.
+- **Item tags** (e.g. *Popular*, *Spicy*) via an optional `tags` column.
+- **Halal note**, allergy + pricing disclaimers, back-to-top button, installable.
+
+### Business details & toggles (`js/config.js`)
+Fill in `BUSINESS_INFO` (phone, whatsapp, instagram, address, mapsUrl, hours) to
+light up the contact bar and the open/closed badge — empty fields stay hidden.
+`FEATURES` toggles search / category tabs / back-to-top on or off.
 
 ---
 
@@ -27,7 +48,7 @@ unreachable. So it works immediately out of the box, and upgrading to the live
 sheet is a one-line change.
 
 ### Data columns
-`name` · `category` · `price` · `description` · `icon` · `status`
+`name` · `category` · `price` · `description` · `icon` · `status` · `tags` *(optional)*
 
 Items whose `status` is `sold out`, `discontinued`, `hidden`, etc. are **fully
 removed** from the page (not greyed out). See `HIDDEN_STATUSES` in `js/config.js`.

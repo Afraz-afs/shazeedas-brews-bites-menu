@@ -1,0 +1,18 @@
+{
+  "name": "Shazeeda's Brews & Bites",
+  "short_name": "Shazeeda's",
+  "description": "Menu for Shazeeda's Brews & Bites — crafted to crave.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#29261b",
+  "theme_color": "#29261b",
+  "icons": [
+    {
+      "src": "assets/logo.jpeg",
+      "sizes": "1024x1024",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

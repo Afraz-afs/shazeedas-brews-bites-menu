@@ -17,6 +17,7 @@ Each **row** is one menu item. Each **column** controls one thing:
 | `description` | Optional. A short line under the name. Leave blank if you don't want one.    |
 | `icon`        | A single emoji, e.g. ☕ 🥐 🍰 (on phone/Mac press the emoji key)              |
 | `status`      | `available` to show it. Type `sold out` or `discontinued` to **hide it**.   |
+| `tags`        | *(Optional)* Little labels under an item, e.g. `Popular` or `Spicy, Veg`.    |
 
 ---
 
@@ -28,6 +29,9 @@ Each **row** is one menu item. Each **column** controls one thing:
 It disappears from the menu completely. Change it back to `available` to bring it back.
 
 **Add a new item** → add a new row and fill in the columns.
+
+**Highlight an item** → put a word in the `tags` column, e.g. `Popular`,
+`Chef's pick`, `Spicy`. Separate several with commas: `Popular, Spicy`.
 
 **Remove an item permanently** → set `status` to `discontinued` (or delete the row).
 
