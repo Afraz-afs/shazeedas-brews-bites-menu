@@ -27,7 +27,7 @@
 window.MENU_CONFIG = {
   // Leave as "" to use the local data/menu.json file.
   // Paste the published-to-web CSV link here to go live with the sheet.
-  SHEET_CSV_URL: "",
+  SHEET_CSV_URL: "https://docs.google.com/spreadsheets/d/1FYfq_4dm31diwKL_dO8zMFn3MIOtZ9ikCCl2e_YpcCM/gviz/tq?tqx=out:csv",
 
   // Local fallback file (used when SHEET_CSV_URL is empty, or if the
   // sheet ever fails to load).
