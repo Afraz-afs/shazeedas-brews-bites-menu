@@ -1,0 +1,202 @@
+/* =============================================================
+   Shazeeda's Brews & Bites — styles
+   Brand palette pulled from the logo:
+     deep olive-brown background, gold script, cream, warm brown.
+   Mobile-first; scales up cleanly on tablet/desktop.
+   ============================================================= */
+
+:root {
+  --bg:        #29261b;  /* deep olive-brown (logo background) */
+  --bg-soft:   #322e21;  /* slightly lighter panel */
+  --card:      #34301f;  /* menu card */
+  --card-line: #4a4430;  /* hairline / dividers */
+  --gold:      #d2a02a;  /* "Shazeeda's" script gold */
+  --gold-soft: #e6c468;
+  --cream:     #e9dab8;  /* cup / outline cream */
+  --brown:     #6d4a30;  /* "BREWS & BITES" brown */
+  --text:      #f3ead2;  /* main readable text */
+  --text-dim:  #b9ad8e;  /* descriptions / muted */
+
+  --maxw: 640px;
+  --radius: 16px;
+  --shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  background-image:
+    radial-gradient(120% 60% at 50% -10%, #34301f 0%, var(--bg) 55%);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Header ---------- */
+.header {
+  padding: calc(env(safe-area-inset-top) + 28px) 20px 22px;
+  text-align: center;
+}
+.header__inner { max-width: var(--maxw); margin: 0 auto; }
+
+.header__logo {
+  width: 132px;
+  height: 132px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  box-shadow: var(--shadow);
+  background: var(--bg);
+}
+.header__name {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  color: var(--gold);
+  font-size: clamp(1.9rem, 8vw, 2.8rem);
+  margin: 14px 0 2px;
+  line-height: 1.1;
+}
+.header__tagline {
+  margin: 0;
+  color: var(--cream);
+  font-style: italic;
+  letter-spacing: 0.06em;
+  font-size: 0.98rem;
+}
+
+/* ---------- Menu ---------- */
+.menu {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 8px 16px 28px;
+}
+
+.category { margin-top: 26px; }
+
+.category__title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin: 0 0 12px;
+}
+.category__title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--card-line), transparent);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 15px 16px;
+}
+.item + .item { border-top: 1px solid var(--card-line); }
+
+.item__icon {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+  width: 34px;
+  text-align: center;
+}
+.item__body { flex: 1; min-width: 0; }
+
+.item__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.item__name {
+  font-weight: 600;
+  font-size: 1.04rem;
+  color: var(--text);
+}
+.item__price {
+  font-weight: 700;
+  color: var(--gold);
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.item__desc {
+  margin: 3px 0 0;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+/* ---------- Loading / empty / error states ---------- */
+.state {
+  text-align: center;
+  color: var(--text-dim);
+  padding: 60px 20px;
+}
+.spinner {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto 14px;
+  border: 3px solid var(--card-line);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ---------- Footer ---------- */
+.footer {
+  margin-top: 10px;
+  padding: 26px 20px calc(env(safe-area-inset-bottom) + 34px);
+  background: var(--bg-soft);
+  border-top: 1px solid var(--card-line);
+}
+.footer__inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  text-align: center;
+}
+.footer__note {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  margin: 0 0 12px;
+}
+.footer__halal {
+  color: var(--gold-soft);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+.footer__thanks {
+  color: var(--cream);
+  font-weight: 500;
+  margin: 16px 0 6px;
+}
+.footer__brand {
+  font-family: "Pacifico", cursive;
+  color: var(--gold);
+  font-size: 1.1rem;
+  margin: 4px 0 0;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .spinner { animation: none; }
+}

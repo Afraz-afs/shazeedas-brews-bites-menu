@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#29261b" />
+  <title>Shazeeda's Brews &amp; Bites — Menu</title>
+  <meta name="description" content="The menu for Shazeeda's Brews & Bites — crafted to crave. Coffee, cold drinks, bites and sweets." />
+
+  <!-- Open Graph (nice preview if the link is shared) -->
+  <meta property="og:title" content="Shazeeda's Brews & Bites — Menu" />
+  <meta property="og:description" content="Crafted to crave. Tap to view our full menu." />
+  <meta property="og:image" content="assets/logo.jpeg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="assets/logo.jpeg" />
+  <link rel="apple-touch-icon" href="assets/logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <img class="header__logo" src="assets/logo.jpeg" alt="Shazeeda's Brews & Bites logo" />
+      <h1 class="header__name">Shazeeda's Brews &amp; Bites</h1>
+      <p class="header__tagline">Crafted to Crave</p>
+    </div>
+  </header>
+
+  <main class="menu" id="menu" aria-live="polite">
+    <!-- Loading / error / menu content is injected here by js/app.js -->
+    <div class="state" id="state">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Loading menu…</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__note footer__halal">
+        🌙 All meat and meat products used are strictly <strong>Halal</strong>.
+      </p>
+      <p class="footer__note">
+        <strong>A note from us:</strong> Please let our team know about any
+        allergies or dietary needs before ordering — items may contain or come
+        into contact with nuts, dairy, gluten and other allergens.
+      </p>
+      <p class="footer__note">
+        Prices are subject to change. A service charge may be added to your bill.
+      </p>
+      <p class="footer__thanks">Thank you for stopping by — enjoy! ☕</p>
+      <p class="footer__brand">Shazeeda's Brews &amp; Bites</p>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

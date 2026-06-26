@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QR Code Generator — Shazeeda's Brews &amp; Bites</title>
+  <style>
+    :root { --bg:#29261b; --gold:#d2a02a; --cream:#e9dab8; --card:#34301f; --line:#4a4430; --text:#f3ead2; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; font-family:system-ui,Segoe UI,Roboto,sans-serif;
+           background:var(--bg); color:var(--text); display:flex; align-items:flex-start;
+           justify-content:center; padding:32px 16px; }
+    .wrap { width:100%; max-width:460px; text-align:center; }
+    h1 { color:var(--gold); font-size:1.4rem; margin:0 0 6px; }
+    p.sub { color:var(--cream); margin:0 0 22px; font-size:.92rem; }
+    label { display:block; text-align:left; font-size:.85rem; color:var(--cream); margin:0 0 6px; }
+    input { width:100%; padding:12px 14px; border-radius:10px; border:1px solid var(--line);
+            background:var(--card); color:var(--text); font-size:1rem; }
+    button { margin-top:14px; width:100%; padding:13px; border:none; border-radius:10px;
+             background:var(--gold); color:#221f15; font-weight:700; font-size:1rem; cursor:pointer; }
+    button.secondary { background:transparent; color:var(--gold); border:1px solid var(--gold); }
+    #qrbox { margin:26px auto 8px; background:#fff; padding:18px; border-radius:16px;
+             width:max-content; min-height:60px; }
+    #qrbox img, #qrbox canvas { display:block; }
+    .hint { color:#b9ad8e; font-size:.8rem; margin-top:10px; line-height:1.5; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Menu QR Code</h1>
+    <p class="sub">Generate the QR code once, after the menu is live. It points at the page URL and never needs to change — only the menu content does.</p>
+
+    <label for="url">Live menu URL</label>
+    <input id="url" type="url" placeholder="https://your-menu-site.netlify.app" />
+    <button id="gen">Generate QR code</button>
+    <button id="dl" class="secondary" style="display:none">Download PNG</button>
+
+    <div id="qrbox"></div>
+    <p class="hint">Tip: print it large and crisp. Test it with a phone camera before putting it on a table or window.</p>
+  </div>
+
+  <!-- QR library (used only on this generator page, not the menu page) -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+  <script>
+    var urlInput = document.getElementById("url");
+    var box = document.getElementById("qrbox");
+    var dlBtn = document.getElementById("dl");
+    var lastCanvas = null;
+
+    document.getElementById("gen").addEventListener("click", function () {
+      var value = urlInput.value.trim();
+      if (!value) { urlInput.focus(); return; }
+      box.innerHTML = "";
+      var canvas = document.createElement("canvas");
+      QRCode.toCanvas(canvas, value, { width: 320, margin: 2,
+        color: { dark: "#29261b", light: "#ffffff" } }, function (err) {
+          if (err) { box.textContent = "Could not generate QR code."; return; }
+          box.appendChild(canvas);
+          lastCanvas = canvas;
+          dlBtn.style.display = "block";
+      });
+    });
+
+    dlBtn.addEventListener("click", function () {
+      if (!lastCanvas) return;
+      var a = document.createElement("a");
+      a.href = lastCanvas.toDataURL("image/png");
+      a.download = "shazeedas-menu-qr.png";
+      a.click();
+    });
+  </script>
+</body>
+</html>

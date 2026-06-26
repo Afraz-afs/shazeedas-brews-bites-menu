@@ -1,0 +1,28 @@
+{
+  "items": [
+    { "name": "Waffles with Scrambled Eggs", "category": "Breakfast", "price": "1200", "description": "Choice of maple, chocolate or strawberry syrup, with a scoop of ice cream.", "icon": "🧇", "status": "available" },
+    { "name": "Grilled Cheese Sandwich",     "category": "Breakfast", "price": "600",  "description": "", "icon": "🧀", "status": "available" },
+    { "name": "Bake & Corned Mutton",        "category": "Breakfast", "price": "1000", "description": "Served with your choice of potatoes or saltfish.", "icon": "🍞", "status": "available" },
+
+    { "name": "Linguini Pasta",              "category": "Lunch", "price": "1500", "description": "With chicken breast or mince.", "icon": "🍝", "status": "available" },
+    { "name": "Chicken Curry & Roti",        "category": "Lunch", "price": "1200", "description": "", "icon": "🍛", "status": "available" },
+    { "name": "Fish & Potatoes",             "category": "Lunch", "price": "1200", "description": "With your choice of potatoes or plantain chips.", "icon": "🐟", "status": "available" },
+    { "name": "Loaded Fries",                "category": "Lunch", "price": "",     "description": "Fries topped with cheese and chicken breast.", "icon": "🍟", "status": "available" },
+
+    { "name": "Chicken & Veg Wrap",          "category": "Sides", "price": "1000", "description": "Fresh, flavourful chicken and vegetables.", "icon": "🌯", "status": "available" },
+    { "name": "Popcorn",                     "category": "Sides", "price": "600",  "description": "With available toppings.", "icon": "🍿", "status": "available" },
+    { "name": "Cinnamon Rolls",              "category": "Sides", "price": "700",  "description": "", "icon": "🥐", "status": "available" },
+    { "name": "Baked Custard",               "category": "Sides", "price": "700",  "description": "", "icon": "🍮", "status": "available" },
+    { "name": "Milkshake",                   "category": "Sides", "price": "1200", "description": "Strawberry, fruit medley or cookies & cream, topped with whipped cream.", "icon": "🥤", "status": "available" },
+    { "name": "Soft Serve Ice Cream Cone",   "category": "Sides", "price": "600",  "description": "Chocolate, vanilla or cotton candy, with available toppings and sauces.", "icon": "🍦", "status": "available" },
+
+    { "name": "Coffee",                      "category": "Beverages", "price": "400", "description": "With or without milk and sugar.", "icon": "☕", "status": "available" },
+    { "name": "Green Tea",                   "category": "Beverages", "price": "300", "description": "With or without milk and sugar.", "icon": "🍵", "status": "available" },
+    { "name": "Slushie",                     "category": "Beverages", "price": "",    "description": "", "icon": "🍧", "status": "available" },
+    { "name": "Water",                       "category": "Beverages", "price": "",    "description": "", "icon": "💧", "status": "available" },
+    { "name": "Pepsi",                       "category": "Beverages", "price": "",    "description": "", "icon": "🥤", "status": "available" },
+    { "name": "Coke",                        "category": "Beverages", "price": "",    "description": "", "icon": "🥤", "status": "available" },
+    { "name": "Lucozade",                    "category": "Beverages", "price": "",    "description": "", "icon": "🧃", "status": "available" },
+    { "name": "Fruta",                       "category": "Beverages", "price": "",    "description": "", "icon": "🧃", "status": "available" }
+  ]
+}

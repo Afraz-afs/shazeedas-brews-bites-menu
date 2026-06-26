@@ -1,0 +1,22 @@
+name,category,price,description,icon,status
+Waffles with Scrambled Eggs,Breakfast,1200,"Choice of maple, chocolate or strawberry syrup, with a scoop of ice cream.",🧇,available
+Grilled Cheese Sandwich,Breakfast,600,,🧀,available
+Bake & Corned Mutton,Breakfast,1000,Served with your choice of potatoes or saltfish.,🍞,available
+Linguini Pasta,Lunch,1500,With chicken breast or mince.,🍝,available
+Chicken Curry & Roti,Lunch,1200,,🍛,available
+Fish & Potatoes,Lunch,1200,With your choice of potatoes or plantain chips.,🐟,available
+Loaded Fries,Lunch,,Fries topped with cheese and chicken breast.,🍟,available
+Chicken & Veg Wrap,Sides,1000,Fresh flavourful chicken and vegetables.,🌯,available
+Popcorn,Sides,600,With available toppings.,🍿,available
+Cinnamon Rolls,Sides,700,,🥐,available
+Baked Custard,Sides,700,,🍮,available
+Milkshake,Sides,1200,"Strawberry, fruit medley or cookies & cream, topped with whipped cream.",🥤,available
+Soft Serve Ice Cream Cone,Sides,600,"Chocolate, vanilla or cotton candy, with available toppings and sauces.",🍦,available
+Coffee,Beverages,400,With or without milk and sugar.,☕,available
+Green Tea,Beverages,300,With or without milk and sugar.,🍵,available
+Slushie,Beverages,,,🍧,available
+Water,Beverages,,,💧,available
+Pepsi,Beverages,,,🥤,available
+Coke,Beverages,,,🥤,available
+Lucozade,Beverages,,,🧃,available
+Fruta,Beverages,,,🧃,available
