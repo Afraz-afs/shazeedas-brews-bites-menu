@@ -51,8 +51,10 @@ window.MENU_CONFIG = {
     phone: "",            // e.g. "+1 868 123 4567"  → tap-to-call button
     whatsapp: "",         // digits only, e.g. "18681234567" → WhatsApp order button
     instagram: "",        // handle only, no @, e.g. "shazeedasbrews" (not on social yet)
-    address: "12–13 Rosignol, West Coast Berbice",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Shazeeda%27s%20Brews%20%26%20Bites%2C%2012-13%20Rosignol%2C%20West%20Coast%20Berbice",
+    address: "12–13 Rosignol, West Coast Berbice, Guyana",
+    // "Directions" button → opens Google Maps directions straight to the
+    // exact shop location (lat,lng provided by the client).
+    mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=6.276596364965894%2C-57.54000419104279",
 
     // Opening hours. Use 24-hour "HH:MM-HH:MM", or "closed".
     // Mon–Sat 6:00 AM – 8:00 PM; Sunday 6:00 AM – 2:00 PM.

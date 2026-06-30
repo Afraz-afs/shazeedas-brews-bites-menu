@@ -199,6 +199,17 @@ body {
   font-size: 1.1rem;
   margin: 4px 0 0;
 }
+.footer__legal {
+  margin: 16px 0 0;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+}
+.footer__legal a {
+  color: var(--gold-soft);
+  text-decoration: none;
+}
+.footer__legal a:hover { text-decoration: underline; }
+.footer__legal span[aria-hidden] { margin: 0 6px; opacity: 0.6; }
 
 /* ---------- Status badge (Open / Closed) ---------- */
 .status-badge {

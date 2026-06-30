@@ -26,6 +26,7 @@
   var state = { items: [], query: "", cats: [] };
 
   // ---- Boot ------------------------------------------------------------
+  setFooterYear();
   renderBusinessInfo();
   renderStatusBadge();
   setupScrollTop();
@@ -302,6 +303,11 @@
     btn.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+  }
+
+  function setFooterYear() {
+    var el = document.getElementById("year");
+    if (el) el.textContent = new Date().getFullYear();
   }
 
   // ====================================================================
