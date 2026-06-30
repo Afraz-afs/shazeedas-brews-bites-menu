@@ -54,7 +54,7 @@ window.MENU_CONFIG = {
     address: "12–13 Rosignol, West Coast Berbice, Guyana",
     // "Directions" button → opens Google Maps directions straight to the
     // exact shop location (lat,lng provided by the client).
-    mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=6.276596364965894%2C-57.54000419104279",
+    mapsUrl: "https://www.google.com/maps/dir/?api=1&destination=6.276446163506728%2C-57.53998856150444",
 
     // Opening hours. Use 24-hour "HH:MM-HH:MM", or "closed".
     // Mon–Sat 6:00 AM – 8:00 PM; Sunday 6:00 AM – 2:00 PM.
