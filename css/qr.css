@@ -1,0 +1,65 @@
+/* =============================================================
+   Shazeeda's Brews & Bites — QR generator (internal tool)
+   Kept in its own file so the page needs no inline styles and
+   the site-wide Content-Security-Policy applies unchanged.
+   ============================================================= */
+
+:root { --bg:#29261b; --gold:#d2a02a; --cream:#e9dab8; --card:#34301f; --line:#4a4430; --text:#f3ead2; }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.wrap { width: 100%; max-width: 460px; text-align: center; }
+
+h1 { color: var(--gold); font-size: 1.4rem; margin: 0 0 6px; }
+
+p.sub { color: var(--cream); margin: 0 0 22px; font-size: .92rem; }
+
+label { display: block; text-align: left; font-size: .85rem; color: var(--cream); margin: 0 0 6px; }
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 14px;
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: var(--gold);
+  color: #221f15;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button.secondary { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+
+#qrbox {
+  margin: 26px auto 8px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 16px;
+  width: max-content;
+}
+#qrbox:empty { display: none; }
+#qrbox canvas { display: block; width: 320px; max-width: 100%; height: auto; }
+
+.hint { color: #b9ad8e; font-size: .8rem; margin-top: 10px; line-height: 1.5; }

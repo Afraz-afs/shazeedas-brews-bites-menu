@@ -7,11 +7,16 @@
   <title>Shazeeda's Brews &amp; Bites — Menu</title>
   <meta name="description" content="The menu for Shazeeda's Brews & Bites — crafted to crave. Breakfast, lunch, sides and beverages. All meat strictly Halal." />
 
-  <!-- Open Graph (nice preview if the link is shared) -->
+  <!-- Open Graph (nice preview if the link is shared).
+       NOTE: scrapers (WhatsApp/Facebook) require ABSOLUTE URLs here.
+       Update these + the canonical link when the custom domain goes live. -->
   <meta property="og:title" content="Shazeeda's Brews & Bites — Menu" />
   <meta property="og:description" content="Crafted to crave. Tap to view our full menu." />
-  <meta property="og:image" content="assets/logo.jpeg" />
+  <meta property="og:image" content="https://shazeedas-brews-bites-menu.pages.dev/assets/logo.jpeg" />
+  <meta property="og:url" content="https://shazeedas-brews-bites-menu.pages.dev/" />
+  <meta property="og:site_name" content="Shazeeda's Brews &amp; Bites" />
   <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://shazeedas-brews-bites-menu.pages.dev/" />
 
   <link rel="icon" href="assets/logo.jpeg" />
   <link rel="apple-touch-icon" href="assets/logo.jpeg" />
@@ -51,7 +56,12 @@
     </div>
   </div>
 
-  <main class="menu" id="menu" aria-live="polite">
+  <!-- Screen-reader announcement for search results (kept OUTSIDE the menu:
+       an aria-live region wrapping the whole menu would re-read every item
+       on each re-render) -->
+  <p id="search-status" class="sr-only" role="status" aria-live="polite"></p>
+
+  <main class="menu" id="menu">
     <!-- Loading / error / menu content is injected here by js/app.js -->
     <div class="state" id="state">
       <div class="spinner" aria-hidden="true"></div>

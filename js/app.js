@@ -141,6 +141,7 @@
     var groups = groupByCategory(items);
     var cats = orderedCategories(groups);
     state.cats = cats;
+    announceResults(items.length);
 
     if (cats.length === 0) {
       catnavEl.innerHTML = "";
@@ -273,7 +274,8 @@
     catnavEl.querySelectorAll(".catnav__btn").forEach(function (btn) {
       var on = btn.getAttribute("data-target") === activeId;
       btn.classList.toggle("is-active", on);
-      if (on) activeBtn = btn;
+      if (on) { btn.setAttribute("aria-current", "true"); activeBtn = btn; }
+      else { btn.removeAttribute("aria-current"); }
     });
     if (activeBtn) centerNavButton(activeBtn);
   }
@@ -303,6 +305,15 @@
     btn.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+  }
+
+  // Tell screen-reader users what a search did, without re-reading the menu.
+  function announceResults(count) {
+    var el = document.getElementById("search-status");
+    if (!el) return;
+    el.textContent = state.query.trim()
+      ? count + (count === 1 ? " item matches " : " items match ") + "“" + state.query.trim() + "”"
+      : "";
   }
 
   function setFooterYear() {

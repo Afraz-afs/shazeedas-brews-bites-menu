@@ -1,3 +1,6 @@
 User-agent: *
 Allow: /
+# Internal QR-generator tool — Cloudflare Pages serves it at /qr (clean URL)
+# and redirects /qr.html there, so keep both out of search results.
+Disallow: /qr
 Disallow: /qr.html
