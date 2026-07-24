@@ -38,8 +38,15 @@ window.MENU_CONFIG = {
   CATEGORY_ORDER: ["Breakfast", "Lunch", "Sides", "Beverages", "Frappé", "Milkshakes", "Ice Cream"],
 
   // Status values (case-insensitive) that HIDE an item completely.
-  // Anything else (e.g. "available", blank) is shown.
-  HIDDEN_STATUSES: ["sold out", "soldout", "sold-out", "discontinued", "hidden", "off", "no"],
+  // Anything else (e.g. "available", blank) is shown. Several natural
+  // phrasings are accepted so the staff member editing the sheet can just
+  // type what comes naturally ("unavailable", "out of stock", …) and it
+  // works — no need to remember one exact magic word.
+  HIDDEN_STATUSES: [
+    "sold out", "soldout", "sold-out", "sold",
+    "unavailable", "not available", "out of stock", "out", "n/a", "na",
+    "discontinued", "hidden", "hide", "off", "no",
+  ],
 
   // Currency symbol shown before numeric prices.
   CURRENCY: "$",
