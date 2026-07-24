@@ -35,7 +35,7 @@ window.MENU_CONFIG = {
 
   // Order categories appear on the page. Any category not listed
   // here still shows, just after the ones that are listed.
-  CATEGORY_ORDER: ["Breakfast", "Lunch", "Sides", "Beverages"],
+  CATEGORY_ORDER: ["Breakfast", "Lunch", "Sides", "Beverages", "Frappé", "Milkshakes", "Ice Cream"],
 
   // Status values (case-insensitive) that HIDE an item completely.
   // Anything else (e.g. "available", blank) is shown.

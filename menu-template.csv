@@ -1,22 +1,62 @@
 name,category,price,description,icon,status
-Waffles with Scrambled Eggs,Breakfast,1200,"Choice of maple, chocolate or strawberry syrup, with a scoop of ice cream.",🧇,available
-Grilled Cheese Sandwich,Breakfast,600,,🧀,available
+Coffee,Breakfast,400,With or without milk and sugar.,☕,available
+Tea (with Milk & Sugar),Breakfast,400,,🫖,available
+Waffle with Scrambled Egg,Breakfast,500,,🧇,available
+Baked Stuffed Potatoes,Breakfast,500,,🥔,available
+Breakfast Bagel,Breakfast,600,,🥯,available
+Bagel with Cream Cheese,Breakfast,,,🥯,available
+Grilled Cheese Sandwich,Breakfast,800,,🧀,available
 Bake & Corned Mutton,Breakfast,1000,Served with your choice of potatoes or saltfish.,🍞,available
-Linguini Pasta,Lunch,1500,With chicken breast or mince.,🍝,available
+Shepherd's Pie,Breakfast,1200,,🥧,available
+Chicken Tortilla,Breakfast,1200,,🌯,available
+Baked Macaroni,Lunch,400,,🧀,available
+Lasagna,Lunch,500,,🍝,available
 Chicken Curry & Roti,Lunch,1200,,🍛,available
 Fish & Potatoes,Lunch,1200,With your choice of potatoes or plantain chips.,🐟,available
+Fish & Chips (Trout),Lunch,1500,,🐟,available
+Fish & Chips (Snapper),Lunch,1800,,🐟,available
+Linguini Pasta,Lunch,2000,With chicken breast or mince.,🍝,available
 Loaded Fries,Lunch,,Fries topped with cheese and chicken breast.,🍟,available
-Chicken & Veg Wrap,Sides,1000,Fresh flavourful chicken and vegetables.,🌯,available
+Cream-Filled Bites,Sides,200,,🧁,available
+Iced Donut,Sides,300,,🍩,available
+Heart Cake,Sides,300,,🍰,available
+Woolies,Sides,300,,🍪,available
+Brownie,Sides,400,,🍫,available
+Cheese Pizza (per slice),Sides,400,,🍕,available
+Cream Pie,Sides,500,,🥧,available
 Popcorn,Sides,600,With available toppings.,🍿,available
-Cinnamon Rolls,Sides,700,,🥐,available
+Potato Wedges,Sides,600,,🍟,available
 Baked Custard,Sides,700,,🍮,available
-Milkshake,Sides,1200,"Strawberry, fruit medley or cookies & cream, topped with whipped cream.",🥤,available
-Soft Serve Ice Cream Cone,Sides,600,"Chocolate, vanilla or cotton candy, with available toppings and sauces.",🍦,available
-Coffee,Beverages,400,With or without milk and sugar.,☕,available
+Cinnamon Rolls,Sides,800,,🥐,available
+Chicken & Veg Wrap,Sides,1000,"Fresh, flavourful chicken and vegetables.",🌯,available
+Flan (per slice),Sides,1600,,🍮,available
+Cheesecake (per slice),Sides,2500,,🍰,available
 Green Tea,Beverages,300,With or without milk and sugar.,🍵,available
-Slushie,Beverages,,,🍧,available
-Water,Beverages,,,💧,available
-Pepsi,Beverages,,,🥤,available
+Country Milk,Beverages,800,,🥛,available
+XL,Beverages,260,,🥤,available
+Viva (355 ml),Beverages,140,,🧃,available
+Viva (500 ml),Beverages,260,,🧃,available
+Pepsi (400 ml),Beverages,160,,🥤,available
+"Pepsi (can, 355 ml)",Beverages,260,,🥤,available
+Pepsi (20 oz),Beverages,280,,🥤,available
 Coke,Beverages,,,🥤,available
-Lucozade,Beverages,,,🧃,available
-Fruta,Beverages,,,🧃,available
+"Fruta (can, 355 ml)",Beverages,280,,🧃,available
+Lucozade Orange,Beverages,400,,🧃,available
+Lucozade Tropical,Beverages,400,,🧃,available
+Diamond Mineral Water (400 ml),Beverages,140,,💧,available
+Blue Spring Water (500 ml),Beverages,140,,💧,available
+Diamond Water (20 oz),Beverages,200,,💧,available
+Diamond Sparkling Water (355 ml),Beverages,220,,💧,available
+Diamond Water (5 gal),Beverages,960,,💧,available
+Slushie,Beverages,500,,🍧,available
+Coffee Classic (Hot or Cold),Frappé,800,,☕,available
+Creamy Latte,Frappé,1200,,☕,available
+Mocha Dream,Frappé,1200,,☕,available
+Caramel Bliss,Frappé,1200,,🍮,available
+Oreo Bliss,Frappé,1200,,🍪,available
+Strawberry Dream,Milkshakes,1000,,🍓,available
+Chocolate Dream,Milkshakes,1000,,🍫,available
+Cookies & Cream,Milkshakes,1000,,🍪,available
+Vanilla Classic,Milkshakes,1000,,🍦,available
+Caramel Classic,Milkshakes,1000,,🍮,available
+Soft Serve Waffle Cone,Ice Cream,700,"Chocolate or vanilla, with available toppings and sauces.",🍦,available
