@@ -62,10 +62,8 @@
   }
 
   function onFresh(items) {
-    if (!Array.isArray(items) || !items.length) {
-      if (!state.items.length) renderMenu(); // shows empty-state
-      return;
-    }
+    // fetchData only ever resolves with a non-empty, validated list, so by
+    // the time we get here the items are safe to trust, show, and cache.
     state.items = items;
     writeCache(items);
     renderMenu();
@@ -75,8 +73,26 @@
     return fetch(url, { cache: "no-store" }).then(function (res) {
       if (!res.ok) throw new Error("HTTP " + res.status);
       return res.text().then(function (text) {
-        return isCsv ? parseCsv(text) : JSON.parse(text).items;
+        var items = isCsv ? parseCsv(text) : (JSON.parse(text) || {}).items;
+        items = validItems(items);
+        // A source that loads (HTTP 200) but contains no usable items — an
+        // emptied / mid-edit / merged-cells sheet, or a login page returned
+        // in place of the CSV — must be treated as a FAILURE so the caller
+        // falls back to the next source instead of showing a blank menu.
+        if (!items.length) throw new Error("Source loaded but had no valid menu items");
+        return items;
       });
+    });
+  }
+
+  // A usable item is an object with a non-empty name. This is the single
+  // guard that protects customers from a malformed data source: anything
+  // without a real name (e.g. rows parsed under a broken header row) is
+  // dropped, and if that leaves nothing we fall back to the local menu.
+  function validItems(items) {
+    if (!Array.isArray(items)) return [];
+    return items.filter(function (it) {
+      return it && typeof it.name === "string" && it.name.trim() !== "";
     });
   }
 
@@ -84,7 +100,9 @@
     try {
       var raw = localStorage.getItem(CACHE_KEY);
       if (!raw) return null;
-      return JSON.parse(raw).items || null;
+      // Sanitize on the way out too, so a cache written by an older build
+      // (or a poisoned entry) can never flash a blank menu at a customer.
+      return validItems(JSON.parse(raw).items);
     } catch (e) { return null; }
   }
   function writeCache(items) {
