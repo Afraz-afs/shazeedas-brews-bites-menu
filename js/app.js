@@ -115,9 +115,17 @@
   //  Filtering & grouping
   // ====================================================================
   function isHidden(item) {
+    var hides = cfg.HIDDEN_STATUSES || [];
+    // The status column is the intended place to pull an item ("sold out",
+    // "unavailable", …). We ALSO honour a hide-word typed into the PRICE
+    // column, because that's a very common slip when editing the sheet —
+    // and hiding the item is far better than printing the word "unavailable"
+    // where a customer expects to see a price.
     var status = String(item.status || "").trim().toLowerCase();
-    if (!status) return false;
-    return (cfg.HIDDEN_STATUSES || []).indexOf(status) !== -1;
+    if (status && hides.indexOf(status) !== -1) return true;
+    var price = String(item.price || "").trim().toLowerCase();
+    if (price && hides.indexOf(price) !== -1) return true;
+    return false;
   }
 
   function matchesQuery(item, q) {
