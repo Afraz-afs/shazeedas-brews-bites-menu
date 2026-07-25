@@ -59,6 +59,6 @@
     { "name": "Vanilla Classic",             "category": "Milkshakes", "price": "1000", "description": "", "icon": "🍦", "status": "available" },
     { "name": "Caramel Classic",             "category": "Milkshakes", "price": "1000", "description": "", "icon": "🍮", "status": "available" },
 
-    { "name": "Soft Serve Waffle Cone",      "category": "Ice Cream", "price": "700", "description": "Chocolate or vanilla.", "icon": "🍦", "status": "available" }
+    { "name": "Soft Serve Waffle Cone",      "category": "Ice Cream", "price": "700", "description": "Chocolate or Vanilla", "icon": "🍦", "status": "available" }
   ]
 }
