@@ -23,14 +23,14 @@ printed on card and laminated.
 **"Background graphics"** in the print dialog, or the dark header band and the
 gold rules will come out blank.
 
-## One item is deliberately not on the printed menu
+## The printed menu carries every item
 
-- **Bagel with Cream Cheese** — no price has ever been supplied. Once the owner
-  gives one, it goes in the commented-out block in the Breakfast section of
-  `menu-print.html`.
+All **54** items match `data/menu.json` exactly. Nothing is held back —
+Bagel with Cream Cheese was previously left off for want of a price, and the
+owner supplied it ($400) on 2026-07-25.
 
-Everything else matches `data/menu.json` exactly — 53 printed items out of the
-54 the owner sells.
+Items in each section are listed **cheapest first**; keep that order when
+adding anything.
 
 ## Keeping it in sync
 

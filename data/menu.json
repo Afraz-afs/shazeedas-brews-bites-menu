@@ -5,7 +5,7 @@
     { "name": "Waffle with Scrambled Egg",   "category": "Breakfast", "price": "500",  "description": "", "icon": "🧇", "status": "available" },
     { "name": "Baked Stuffed Potatoes",      "category": "Breakfast", "price": "500",  "description": "", "icon": "🥔", "status": "available" },
     { "name": "Breakfast Bagel",             "category": "Breakfast", "price": "600",  "description": "", "icon": "🥯", "status": "available" },
-    { "name": "Bagel with Cream Cheese",     "category": "Breakfast", "price": "",     "description": "", "icon": "🥯", "status": "available" },
+    { "name": "Bagel with Cream Cheese",     "category": "Breakfast", "price": "400",  "description": "", "icon": "🥯", "status": "available" },
     { "name": "Grilled Cheese Sandwich",     "category": "Breakfast", "price": "800",  "description": "", "icon": "🧀", "status": "available" },
     { "name": "Shepherd's Pie",              "category": "Breakfast", "price": "1200", "description": "", "icon": "🥧", "status": "available" },
     { "name": "Chicken Tortilla",            "category": "Breakfast", "price": "1200", "description": "", "icon": "🌯", "status": "available" },
