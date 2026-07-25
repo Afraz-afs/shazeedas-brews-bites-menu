@@ -1,6 +1,6 @@
 {
   "items": [
-    { "name": "Coffee Black",                "category": "Breakfast", "price": "400",  "description": "", "icon": "☕", "status": "available" },
+    { "name": "Coffee (Black)",              "category": "Breakfast", "price": "400",  "description": "", "icon": "☕", "status": "available" },
     { "name": "Tea (with Milk & Sugar)",     "category": "Breakfast", "price": "400",  "description": "", "icon": "🫖", "status": "available" },
     { "name": "Waffle with Scrambled Egg",   "category": "Breakfast", "price": "500",  "description": "", "icon": "🧇", "status": "available" },
     { "name": "Baked Stuffed Potatoes",      "category": "Breakfast", "price": "500",  "description": "", "icon": "🥔", "status": "available" },
@@ -24,7 +24,7 @@
     { "name": "Brownie",                     "category": "Sides", "price": "400",  "description": "", "icon": "🍫", "status": "available" },
     { "name": "Cheese Pizza (per slice)",    "category": "Sides", "price": "400",  "description": "", "icon": "🍕", "status": "available" },
     { "name": "Cream Pie",                   "category": "Sides", "price": "500",  "description": "", "icon": "🥧", "status": "available" },
-    { "name": "Popcorn (Regular)",           "category": "Sides", "price": "600",  "description": "With available toppings.", "icon": "🍿", "status": "available" },
+    { "name": "Popcorn",                     "category": "Sides", "price": "600",  "description": "With available toppings.", "icon": "🍿", "status": "available" },
     { "name": "Potato Wedges",               "category": "Sides", "price": "600",  "description": "", "icon": "🍟", "status": "available" },
     { "name": "Cinnamon Rolls",              "category": "Sides", "price": "800",  "description": "", "icon": "🥐", "status": "available" },
     { "name": "Flan (per slice)",            "category": "Sides", "price": "1600", "description": "", "icon": "🍮", "status": "available" },

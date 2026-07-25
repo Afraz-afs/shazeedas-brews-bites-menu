@@ -1,5 +1,5 @@
 name,category,price,description,icon,status
-Coffee Black,Breakfast,400,,☕,available
+Coffee (Black),Breakfast,400,,☕,available
 Tea (with Milk & Sugar),Breakfast,400,,🫖,available
 Waffle with Scrambled Egg,Breakfast,500,,🧇,available
 Baked Stuffed Potatoes,Breakfast,500,,🥔,available
@@ -21,7 +21,7 @@ Woolies,Sides,300,,🍪,available
 Brownie,Sides,400,,🍫,available
 Cheese Pizza (per slice),Sides,400,,🍕,available
 Cream Pie,Sides,500,,🥧,available
-Popcorn (Regular),Sides,600,With available toppings.,🍿,available
+Popcorn,Sides,600,With available toppings.,🍿,available
 Potato Wedges,Sides,600,,🍟,available
 Cinnamon Rolls,Sides,800,,🥐,available
 Flan (per slice),Sides,1600,,🍮,available
