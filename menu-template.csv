@@ -1,22 +1,19 @@
 name,category,price,description,icon,status
-Coffee,Breakfast,400,With or without milk and sugar.,☕,available
+Coffee Black,Breakfast,400,,☕,available
 Tea (with Milk & Sugar),Breakfast,400,,🫖,available
 Waffle with Scrambled Egg,Breakfast,500,,🧇,available
 Baked Stuffed Potatoes,Breakfast,500,,🥔,available
 Breakfast Bagel,Breakfast,600,,🥯,available
 Bagel with Cream Cheese,Breakfast,,,🥯,available
 Grilled Cheese Sandwich,Breakfast,800,,🧀,available
-Bake & Corned Mutton,Breakfast,1000,Served with your choice of potatoes or saltfish.,🍞,available
 Shepherd's Pie,Breakfast,1200,,🥧,available
 Chicken Tortilla,Breakfast,1200,,🌯,available
 Baked Macaroni,Lunch,400,,🧀,available
 Lasagna,Lunch,500,,🍝,available
-Chicken Curry & Roti,Lunch,1200,,🍛,available
-Fish & Potatoes,Lunch,1200,With your choice of potatoes or plantain chips.,🐟,available
 Fish & Chips (Trout),Lunch,1500,,🐟,available
 Fish & Chips (Snapper),Lunch,1800,,🐟,available
 Linguini Pasta,Lunch,2000,With chicken breast or mince.,🍝,available
-Loaded Fries,Lunch,,Fries topped with cheese and chicken breast.,🍟,available
+Loaded Fries,Lunch,1200,Fries topped with cheese and chicken breast.,🍟,available
 Cream-Filled Bites,Sides,200,,🧁,available
 Iced Donut,Sides,300,,🍩,available
 Heart Cake,Sides,300,,🍰,available
@@ -24,14 +21,11 @@ Woolies,Sides,300,,🍪,available
 Brownie,Sides,400,,🍫,available
 Cheese Pizza (per slice),Sides,400,,🍕,available
 Cream Pie,Sides,500,,🥧,available
-Popcorn,Sides,600,With available toppings.,🍿,available
+Popcorn (Regular),Sides,600,With available toppings.,🍿,available
 Potato Wedges,Sides,600,,🍟,available
-Baked Custard,Sides,700,,🍮,available
 Cinnamon Rolls,Sides,800,,🥐,available
-Chicken & Veg Wrap,Sides,1000,"Fresh, flavourful chicken and vegetables.",🌯,available
 Flan (per slice),Sides,1600,,🍮,available
 Cheesecake (per slice),Sides,2500,,🍰,available
-Green Tea,Beverages,300,With or without milk and sugar.,🍵,available
 Country Milk,Beverages,800,,🥛,available
 XL,Beverages,260,,🥤,available
 Viva (355 ml),Beverages,140,,🧃,available
@@ -39,7 +33,6 @@ Viva (500 ml),Beverages,260,,🧃,available
 Pepsi (400 ml),Beverages,160,,🥤,available
 "Pepsi (can, 355 ml)",Beverages,260,,🥤,available
 Pepsi (20 oz),Beverages,280,,🥤,available
-Coke,Beverages,,,🥤,available
 "Fruta (can, 355 ml)",Beverages,280,,🧃,available
 Lucozade Orange,Beverages,400,,🧃,available
 Lucozade Tropical,Beverages,400,,🧃,available

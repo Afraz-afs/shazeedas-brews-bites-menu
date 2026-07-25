@@ -105,6 +105,18 @@
   .cols--back { padding-top: 15mm; }   /* back page has fewer rows — centre it */
   .col > section + section { margin-top: 9mm; }
 
+  /* The front page carries fewer items than the back, so at the shared type
+     size it left roughly a third of the sheet empty. Scale the front up to
+     fill it — this also makes the food list the easiest thing to read from
+     across the counter, which is what customers actually queue in front of. */
+  .cols--front { padding-top: 11mm; }
+  .cols--front h2 { font-size: 19.5pt; margin-bottom: 5mm; }
+  .cols--front .item { margin-bottom: 3.7mm; }
+  .cols--front .item .name,
+  .cols--front .item .price { font-size: 15pt; }
+  .cols--front .desc { font-size: 11pt; margin: -1.6mm 0 3.7mm; }
+  .cols--front .col > section + section { margin-top: 11mm; }
+
   h2 {
     font-family: Georgia, "Times New Roman", serif;
     font-size: 17pt;
@@ -211,19 +223,16 @@
     </div>
   </div>
 
-  <div class="cols">
+  <div class="cols cols--front">
     <div class="col">
       <section>
         <h2>Breakfast</h2>
-        <div class="item"><span class="name">Coffee</span><span class="dots"></span><span class="price">$400</span></div>
-        <div class="desc">With or without milk and sugar.</div>
+        <div class="item"><span class="name">Coffee Black</span><span class="dots"></span><span class="price">$400</span></div>
         <div class="item"><span class="name">Tea (with Milk &amp; Sugar)</span><span class="dots"></span><span class="price">$400</span></div>
         <div class="item"><span class="name">Waffle with Scrambled Egg</span><span class="dots"></span><span class="price">$500</span></div>
         <div class="item"><span class="name">Baked Stuffed Potatoes</span><span class="dots"></span><span class="price">$500</span></div>
         <div class="item"><span class="name">Breakfast Bagel</span><span class="dots"></span><span class="price">$600</span></div>
         <div class="item"><span class="name">Grilled Cheese Sandwich</span><span class="dots"></span><span class="price">$800</span></div>
-        <div class="item"><span class="name">Bake &amp; Corned Mutton</span><span class="dots"></span><span class="price">$1000</span></div>
-        <div class="desc">Served with your choice of potatoes or saltfish.</div>
         <div class="item"><span class="name">Shepherd's Pie</span><span class="dots"></span><span class="price">$1200</span></div>
         <div class="item"><span class="name">Chicken Tortilla</span><span class="dots"></span><span class="price">$1200</span></div>
         <!-- Bagel with Cream Cheese — no price supplied yet; add here once known:
@@ -235,15 +244,12 @@
         <h2>Lunch</h2>
         <div class="item"><span class="name">Baked Macaroni</span><span class="dots"></span><span class="price">$400</span></div>
         <div class="item"><span class="name">Lasagna</span><span class="dots"></span><span class="price">$500</span></div>
-        <div class="item"><span class="name">Chicken Curry &amp; Roti</span><span class="dots"></span><span class="price">$1200</span></div>
-        <div class="item"><span class="name">Fish &amp; Potatoes</span><span class="dots"></span><span class="price">$1200</span></div>
-        <div class="desc">With your choice of potatoes or plantain chips.</div>
-        <div class="item"><span class="name">Loaded Fries</span><span class="dots"></span><span class="price">$1200</span></div>
-        <div class="desc">Fries topped with cheese and chicken breast.</div>
         <div class="item"><span class="name">Fish &amp; Chips (Trout)</span><span class="dots"></span><span class="price">$1500</span></div>
         <div class="item"><span class="name">Fish &amp; Chips (Snapper)</span><span class="dots"></span><span class="price">$1800</span></div>
         <div class="item"><span class="name">Linguini Pasta</span><span class="dots"></span><span class="price">$2000</span></div>
         <div class="desc">With chicken breast or mince.</div>
+        <div class="item"><span class="name">Loaded Fries</span><span class="dots"></span><span class="price">$1200</span></div>
+        <div class="desc">Fries topped with cheese and chicken breast.</div>
       </section>
     </div>
 
@@ -257,13 +263,10 @@
         <div class="item"><span class="name">Brownie</span><span class="dots"></span><span class="price">$400</span></div>
         <div class="item"><span class="name">Cheese Pizza (per slice)</span><span class="dots"></span><span class="price">$400</span></div>
         <div class="item"><span class="name">Cream Pie</span><span class="dots"></span><span class="price">$500</span></div>
-        <div class="item"><span class="name">Popcorn</span><span class="dots"></span><span class="price">$600</span></div>
+        <div class="item"><span class="name">Popcorn (Regular)</span><span class="dots"></span><span class="price">$600</span></div>
         <div class="desc">With available toppings.</div>
         <div class="item"><span class="name">Potato Wedges</span><span class="dots"></span><span class="price">$600</span></div>
-        <div class="item"><span class="name">Baked Custard</span><span class="dots"></span><span class="price">$700</span></div>
         <div class="item"><span class="name">Cinnamon Rolls</span><span class="dots"></span><span class="price">$800</span></div>
-        <div class="item"><span class="name">Chicken &amp; Veg Wrap</span><span class="dots"></span><span class="price">$1000</span></div>
-        <div class="desc">Fresh, flavourful chicken and vegetables.</div>
         <div class="item"><span class="name">Flan (per slice)</span><span class="dots"></span><span class="price">$1600</span></div>
         <div class="item"><span class="name">Cheesecake (per slice)</span><span class="dots"></span><span class="price">$2500</span></div>
       </section>
@@ -301,8 +304,6 @@
         <div class="item"><span class="name">Pepsi (can, 355 ml)</span><span class="dots"></span><span class="price">$260</span></div>
         <div class="item"><span class="name">Pepsi (20 oz)</span><span class="dots"></span><span class="price">$280</span></div>
         <div class="item"><span class="name">Fruta (can, 355 ml)</span><span class="dots"></span><span class="price">$280</span></div>
-        <div class="item"><span class="name">Green Tea</span><span class="dots"></span><span class="price">$300</span></div>
-        <div class="desc">With or without milk and sugar.</div>
         <div class="item"><span class="name">Lucozade Orange</span><span class="dots"></span><span class="price">$400</span></div>
         <div class="item"><span class="name">Lucozade Tropical</span><span class="dots"></span><span class="price">$400</span></div>
         <div class="item"><span class="name">Slushie</span><span class="dots"></span><span class="price">$500</span></div>
