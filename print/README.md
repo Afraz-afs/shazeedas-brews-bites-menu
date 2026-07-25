@@ -78,7 +78,15 @@ $doc.ComputeStatistics(2)     # page count — must be 2
 $doc.Close([ref]$false); $word.Quit()
 ```
 
-Word paginates differently from Chrome, so the `.docx` uses its own tighter
-spacing to stay at two pages. If a batch of items is added it will spill to a
+Two Word-specific traps, both already handled in the source — check for them
+after any rebuild by exporting to PDF and looking at where page 1 ends:
+
+- Word's HTML importer **ignores `page-break-before` on a `<div>`**. The
+  front/back split relies on `<br clear="all" class="pagebreak">` with
+  `mso-special-character: line-break`. Without it the page count is still 2,
+  but Beverages starts halfway down the front — so a page count alone does
+  not prove the split is right.
+- Word paginates differently from Chrome, so the `.docx` uses its own tighter
+  spacing to stay at two pages. If a batch of items is added it will spill to a
 third page — tighten `td { padding }` and the `h2` margins in the source HTML
 until `ComputeStatistics(2)` returns 2 again.

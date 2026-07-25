@@ -28,7 +28,9 @@ td.desc { font-size: 8.5pt; font-style: italic; color: #6b5a3e;
              text-transform: uppercase; margin: 0 0 2pt 0; }
 .footer p { margin: 0 0 1pt 0; font-size: 9.5pt; }
 .fine { font-size: 8.5pt; font-style: italic; color: #6b5a3e; }
-.pagebreak { page-break-before: always; }
+/* Word's HTML importer ignores page-break-before on a <div>; it only honours
+   the mso line-break form below, applied to a <br>. Do not "simplify" this. */
+br.pagebreak { mso-special-character: line-break; page-break-before: always; }
 </style>
 </head>
 <body>
@@ -78,7 +80,7 @@ td.desc { font-size: 8.5pt; font-style: italic; color: #6b5a3e;
 <tr><td class="name">Cheesecake (per slice)</td><td class="price">$2500</td></tr>
 </table>
 
-<div class="pagebreak"></div>
+<br clear="all" class="pagebreak">
 
 <h1>Shazeeda's Brews &amp; Bites</h1>
 <p class="tagline">Crafted to Crave</p>
