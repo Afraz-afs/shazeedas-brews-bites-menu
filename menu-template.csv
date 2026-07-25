@@ -12,7 +12,7 @@ Baked Macaroni,Lunch,400,,🧀,available
 Lasagna,Lunch,500,,🍝,available
 Fish & Chips (Trout),Lunch,1500,,🐟,available
 Fish & Chips (Snapper),Lunch,1800,,🐟,available
-Linguini Pasta,Lunch,2000,With chicken breast or mince.,🍝,available
+Linguini Pasta,Lunch,2000,,🍝,available
 Loaded Fries,Lunch,1200,Fries topped with cheese and chicken breast.,🍟,available
 Cream-Filled Bites,Sides,200,,🧁,available
 Iced Donut,Sides,300,,🍩,available
@@ -21,7 +21,7 @@ Woolies,Sides,300,,🍪,available
 Brownie,Sides,400,,🍫,available
 Cheese Pizza (per slice),Sides,400,,🍕,available
 Cream Pie,Sides,500,,🥧,available
-Popcorn,Sides,600,With available toppings.,🍿,available
+Popcorn,Sides,600,,🍿,available
 Potato Wedges,Sides,600,,🍟,available
 Cinnamon Rolls,Sides,800,,🥐,available
 Flan (per slice),Sides,1600,,🍮,available
@@ -52,4 +52,4 @@ Chocolate Dream,Milkshakes,1000,,🍫,available
 Cookies & Cream,Milkshakes,1000,,🍪,available
 Vanilla Classic,Milkshakes,1000,,🍦,available
 Caramel Classic,Milkshakes,1000,,🍮,available
-Soft Serve Waffle Cone,Ice Cream,700,"Chocolate or vanilla, with available toppings and sauces.",🍦,available
+Soft Serve Waffle Cone,Ice Cream,700,Chocolate or vanilla.,🍦,available
