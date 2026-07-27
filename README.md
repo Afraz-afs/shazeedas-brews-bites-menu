@@ -7,16 +7,28 @@ new items and sold-out items can be changed without touching code or re-deployin
 
 ```
 index.html            The menu page
+legal.html            Terms of Use + Privacy Notice (linked from the footer)
 qr.html               One-time QR-code generator (run after hosting is live)
+404.html              Branded not-found page (also disables Pages' SPA fallback)
 css/styles.css        Brand styling (colours pulled from the logo)
+css/legal.css         Styling for legal.html and 404.html
+css/qr.css            Styling for the QR generator
 js/config.js          ⭐ The one file you edit: data source + business details
 js/app.js             Loads + renders the menu, hides sold-out items
-data/menu.json        Local fallback menu (used until the Sheet is connected)
+js/qr.js              QR generator page logic
+js/vendor/qrcode.js   Self-hosted QR library (no CDN, so the strict CSP applies)
+data/menu.json        Local fallback menu (used if the Sheet can't be read)
 menu-template.csv     Import this into Google Sheets to create the client's sheet
+print/                Printable two-sided A4 menu for customers with no internet
 manifest.webmanifest  Makes the page installable ("Add to Home Screen")
+_headers              Security headers for Cloudflare Pages (CSP, HSTS, …)
+robots.txt            Keeps the internal /qr tool out of search results
 assets/logo.jpeg      The logo
 CLIENT-GUIDE.md       Plain-English instructions to hand to the client
 ```
+
+See `print/README.md` for how the printed menu is built and re-exported — it is a
+**snapshot** of `data/menu.json`, so it has to be re-made whenever prices change.
 
 ---
 
@@ -60,15 +72,23 @@ removed** from the page (not greyed out). See `HIDDEN_STATUSES` in `js/config.js
 1. Create a new Google Sheet.
 2. **File ▸ Import ▸ Upload** and choose `menu-template.csv` (replace current sheet).
    This gives you the correct column headers and some starter rows.
-3. **File ▸ Share ▸ Publish to web.**
-   - Choose the menu tab.
-   - Choose **Comma-separated values (.csv)**.
-   - Click **Publish** and copy the link.
-4. Open `js/config.js` and paste that link into `SHEET_CSV_URL`:
+3. **Share ▸ General access ▸ Anyone with the link (Viewer).**
+4. Open `js/config.js` and set `SHEET_CSV_URL` to the sheet's **gviz CSV** export —
+   take the sheet ID out of the share link and use:
    ```js
-   SHEET_CSV_URL: "https://docs.google.com/spreadsheets/d/e/XXXX/pub?output=csv",
+   SHEET_CSV_URL: "https://docs.google.com/spreadsheets/d/<SHEET_ID>/gviz/tq?tqx=out:csv",
    ```
+   This is the form the site actually uses. (The older *Publish to web*
+   `/pub?output=csv` link also works, but Google caches it, so it can lag a few
+   minutes behind an edit. The gviz export above has been observed reflecting
+   sheet edits immediately.)
 5. Save. The page now reads live from the sheet. Hand `CLIENT-GUIDE.md` to the client.
+
+> The site fetches this URL from the browser, so it must stay reachable
+> cross-origin. Google echoes the requesting origin back in
+> `Access-Control-Allow-Origin`, and `docs.google.com` is allow-listed in the
+> `connect-src` directive in `_headers` — if you ever change the data host, that
+> CSP line has to change with it or the fetch will be blocked.
 
 > **First version without a sheet?** Skip this step. The page already shows the
 > menu from `data/menu.json`. You can connect the sheet later — nothing else changes.
