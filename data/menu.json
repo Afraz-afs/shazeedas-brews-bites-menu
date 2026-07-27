@@ -8,6 +8,7 @@
     { "name": "Bagel with Cream Cheese",     "category": "Breakfast", "price": "400",  "description": "", "icon": "🥯", "status": "available" },
     { "name": "Grilled Cheese Sandwich",     "category": "Breakfast", "price": "800",  "description": "", "icon": "🧀", "status": "available" },
     { "name": "Shepherd's Pie",              "category": "Breakfast", "price": "1200", "description": "", "icon": "🥧", "status": "available" },
+    { "name": "Boulanger choka & Roti",      "category": "Breakfast", "price": "500",  "description": "", "icon": "🌯", "status": "available" },
     { "name": "Chicken Tortilla",            "category": "Breakfast", "price": "1200", "description": "", "icon": "🌯", "status": "available" },
 
     { "name": "Baked Macaroni",              "category": "Lunch", "price": "400",  "description": "", "icon": "🧀", "status": "available" },
@@ -20,7 +21,7 @@
     { "name": "Cream-Filled Bites",          "category": "Sides", "price": "200",  "description": "", "icon": "🧁", "status": "available" },
     { "name": "Iced Donut",                  "category": "Sides", "price": "300",  "description": "", "icon": "🍩", "status": "available" },
     { "name": "Heart Cake",                  "category": "Sides", "price": "300",  "description": "", "icon": "🍰", "status": "available" },
-    { "name": "Woolies",                     "category": "Sides", "price": "300",  "description": "", "icon": "🍪", "status": "available" },
+    { "name": "Whoopie pie",                 "category": "Sides", "price": "300",  "description": "", "icon": "🍪", "status": "available" },
     { "name": "Brownie",                     "category": "Sides", "price": "400",  "description": "", "icon": "🍫", "status": "available" },
     { "name": "Cheese Pizza (per slice)",    "category": "Sides", "price": "400",  "description": "", "icon": "🍕", "status": "available" },
     { "name": "Cream Pie",                   "category": "Sides", "price": "500",  "description": "", "icon": "🥧", "status": "available" },
@@ -30,7 +31,7 @@
     { "name": "Flan (per slice)",            "category": "Sides", "price": "1600", "description": "", "icon": "🍮", "status": "available" },
     { "name": "Cheesecake (per slice)",      "category": "Sides", "price": "2500", "description": "", "icon": "🍰", "status": "available" },
 
-    { "name": "Country Milk",                "category": "Beverages", "price": "800", "description": "", "icon": "🥛", "status": "available" },
+    { "name": "Country Milk",                "category": "Beverages", "price": "480", "description": "", "icon": "🥛", "status": "available" },
     { "name": "XL",                          "category": "Beverages", "price": "260", "description": "", "icon": "🥤", "status": "available" },
     { "name": "Viva (355 ml)",               "category": "Beverages", "price": "140", "description": "", "icon": "🧃", "status": "available" },
     { "name": "Viva (500 ml)",               "category": "Beverages", "price": "260", "description": "", "icon": "🧃", "status": "available" },
